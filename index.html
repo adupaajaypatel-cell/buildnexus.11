@@ -72,21 +72,25 @@ section h2{text-align:center;font-size:2.5rem;color:#1E90FF;margin-bottom:3rem;}
 
 /* Contact */
 .contact{text-align:center;margin:4rem 0;padding:2rem 0;background:#F5F5F5;}
-.contact h3{color:#1E90FF;margin-bottom:10px;}
-.contact p{color:#555;margin-bottom:20px;}
+/* ... other contact styles ... */
 .contact form{
     display:flex;
-    justify-content:center;
+    justify-content:center; /* Ensures contents are centered horizontally */
     flex-wrap:wrap;
     gap:10px;
-    max-width: 600px; /* Constrain the form width */
-    margin: 0 auto; /* CENTER THE FORM BLOCK */
+    max-width: 650px; /* Increased width slightly to hold items on one line on most screens */
+    margin: 0 auto; /* This centers the form block itself */
 }
-.contact input[type="email"]{padding:12px 20px;border-radius:6px;border:1px solid #ccc;font-size:1rem;flex:1;min-width:250px;}
+.contact input[type="email"]{
+    padding:12px 20px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:1rem;
+    flex: 1 1 250px; /* Added flex-grow and minimum width to control wrapping */
+    min-width:250px;
+}
 .contact button{padding:12px 30px;background:#1E90FF;color:white;border:none;border-radius:6px;cursor:pointer;transition:0.3s;}
-.contact button:hover{opacity:0.9;}
-#form-message{margin-top:15px;font-weight:bold;color:green;display:none;}
-
+/* ... other contact styles ... */
 /* Fade-in */
 .fade-in{opacity:0;transform:translateY(30px);transition: opacity 1s ease-out, transform 1s ease-out;}
 .fade-in.visible{opacity:1;transform:translateY(0);}
