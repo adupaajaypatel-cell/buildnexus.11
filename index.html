@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,7 +9,7 @@
 /* Reset and Base Styles */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 html{scroll-behavior:smooth;}
-body{background:#fff;color:#2B2B2B;padding-top:70px;} /* Padding for fixed header */
+body{background:#fff;color:#2B2B2B;padding-top:70px;}
 .container{width:90%;max-width:1200px;margin:auto;}
 
 /* Header/Navigation */
@@ -18,9 +19,7 @@ nav{display:flex;justify-content:space-between;align-items:center;height:100%;pa
 .nav-links{list-style:none;display:flex;}
 .nav-links li{margin-left:25px;}
 .nav-links a{color:#555;text-decoration:none;font-size:1rem;transition:color 0.3s;}
-.nav-links a:hover{color:#1E90FF;}
-
-/* Mobile Menu Toggle */
+.nav-links a:hover
 .menu-toggle{display:none;font-size:24px;cursor:pointer;}
 
 /* Hero */
@@ -33,7 +32,7 @@ nav{display:flex;justify-content:space-between;align-items:center;height:100%;pa
 /* AI Mockup */
 .ai-mockup{display:flex;flex-direction:column;justify-content:center;align-items:center;margin:5rem 0;min-height:400px;position:relative;}
 .ai-mockup h2{margin-bottom:3rem;}
-.mockup-wrapper{position:relative;width:100%;max-width:900px;height:auto; margin: 0 auto;} /* ADDED MARGIN AUTO FOR CENTERING */
+.mockup-wrapper{position:relative;width:100%;max-width:900px;height:auto; margin: 0 auto;}
 .mockup-wrapper img{width:100%;height:auto;display:block;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,0.1);position:relative;z-index:1;}
 .blueprint-grid{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:2;}
 .blueprint-grid::before,.blueprint-grid::after{content:'';position:absolute;width:2px;height:100%;background:rgba(30,144,255,0.3);animation:slide-vertical 3s linear infinite;}
@@ -65,6 +64,18 @@ section h2{text-align:center;font-size:2.5rem;color:#1E90FF;margin-bottom:3rem;}
 .step:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.08);}
 .step h4{color:#1E90FF;margin-bottom:10px;}
 
+/* Upload Section */
+.upload-section{text-align:center;margin:5rem 0;}
+.upload-section .upload-subtext{color:#555;margin-bottom:1.5rem;}
+.upload-box{border:2px dashed #1E90FF;padding:40px;border-radius:12px;background:#F8FBFF;cursor:pointer;transition:0.3s;}
+.upload-box:hover
+.upload-preview{margin-top:2rem;display:none;}
+.upload-preview img{max-width:400px;width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
+.loading{display:none;margin-top:2rem;}
+.spinner{width:40px;height:40px;border:4px solid #1E90FF;border-top-color:transparent;border-radius:50%;margin:0 auto 10px;animation:spin 1s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.result{display:none;margin-top:2rem;color:green; font-weight:bold;}
+
 /* CTA */
 .cta{text-align:center;margin:5rem 0;}
 .cta button{background-color:#1E90FF;color:white;border:none;padding:15px 40px;font-size:1.2rem;cursor:pointer;border-radius:6px;transition:0.3s;}
@@ -74,14 +85,7 @@ section h2{text-align:center;font-size:2.5rem;color:#1E90FF;margin-bottom:3rem;}
 .contact{text-align:center;margin:4rem 0;padding:2rem 0;background:#F5F5F5;}
 .contact h3{color:#1E90FF;margin-bottom:10px;}
 .contact p{color:#555;margin-bottom:20px;}
-.contact form{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    max-width: 600px; /* Constrain the form width */
-    margin: 0 auto; /* CENTER THE FORM BLOCK */
-}
+.contact form{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;max-width:600px;margin:0 auto;}
 .contact input[type="email"]{padding:12px 20px;border-radius:6px;border:1px solid #ccc;font-size:1rem;flex:1;min-width:250px;}
 .contact button{padding:12px 30px;background:#1E90FF;color:white;border:none;border-radius:6px;cursor:pointer;transition:0.3s;}
 .contact button:hover{opacity:0.9;}
@@ -96,155 +100,192 @@ footer{text-align:center;padding:2rem 0;color:#888;font-size:0.9rem;}
 
 /* Responsive Design */
 @media(max-width:900px){
-    .features,.steps{flex-direction:column;}
-    .hero{align-items:center;text-align:center;}
-    .hero h1{font-size:2.5rem;}
-    .ai-mockup{margin:3rem 0;}
-    .nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;width:100%;background:rgba(255,255,255,0.98);padding:10px 0;box-shadow:0 5px 10px rgba(0,0,0,0.05);}
-    .nav-links.active{display:flex;}
-    .nav-links li{margin:10px 0;text-align:center;}
-    .menu-toggle{display:block;}
-} 
-</style>
+.features,.steps{flex-direction:column;}
+.hero{align-items:center;text-align:center;}
+.hero h1{font-size:2.5rem;}
+.ai-mockup{margin:3rem 0;}
+.nav-links{display:none;flex-direction:column;position:absolute;top:70px;left:0;width:100%;background:rgba(255,255,255,0.98);padding:10px 0;box-shadow:0 5px 10px rgba(0,0,0,0.05);}
+.nav-links.active{display:flex;}
+.nav-links li{margin:10px 0;text-align:center;}
+.menu-toggle{display:block;}
+} </style>
 
 </head>
 <body>
 
 <header>
-    <nav class="container">
-        <div class="logo"><a href="#hero">BuildNexus</a></div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#features-section">Features</a></li>
-            <li><a href="#mockup-section">AI Insight</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#cta-section" class="button-link">Sign Up</a></li>
-        </ul>
-        <div class="menu-toggle" id="menuToggle">☰</div>
-    </nav>
+<nav class="container">
+<div class="logo"><a href="#hero">BuildNexus</a></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#features-section">Features</a></li>
+<li><a href="#mockup-section">AI Insight</a></li>
+<li><a href="#upload-section">Try AI</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#cta-section" class="button-link">Sign Up</a></li>
+</ul>
+<div class="menu-toggle" id="menuToggle">☰</div>
+</nav>
 </header>
 
+<!-- Hero -->
+
 <section class="hero container fade-in" id="hero">
-    <h1>BuildNexus</h1>
-    <p>Revolutionizing construction with AI-powered cost estimation, planning, and safety compliance – all in real-time.</p>
-    <button onclick="window.location.href='#features-section'">Explore Features</button>
+<h1>BuildNexus</h1>
+<p>Revolutionizing construction with AI-powered cost estimation, planning, and safety compliance – all in real-time.</p>
+<button onclick="window.location.href='#features-section'">Explore Features</button>
 </section>
 
----
+<!-- Features -->
 
 <section class="features-section container fade-in" id="features-section">
-    <h2>Core AI Capabilities</h2>
-    <div class="features">
-        <div class="feature-card"><h3>Instant Quotations</h3><p>Get precise material & labor estimates in seconds from sketches or lists.</p></div>
-        <div class="feature-card"><h3>AI-assisted Planning</h3><p>Optimize project schedules and workflows using intelligent AI insights.</p></div>
-        <div class="feature-card"><h3>Safety Compliance</h3><p>Ensure every project meets strict safety standards effortlessly.</p></div>
-    </div>
+<h2>Core AI Capabilities</h2>
+<div class="features">
+<div class="feature-card"><h3>Instant Quotations</h3><p>Get precise material & labor estimates in seconds from sketches or lists.</p></div>
+<div class="feature-card"><h3>AI-assisted Planning</h3><p>Optimize project schedules and workflows using intelligent AI insights.</p></div>
+<div class="feature-card"><h3>Safety Compliance</h3><p>Ensure every project meets strict safety standards effortlessly.</p></div>
+</div>
 </section>
 
----
+<!-- AI Mockup -->
 
 <section class="ai-mockup container fade-in" id="mockup-section">
-    <h2>Smart Construction, Smarter Decisions</h2>
-    <div class="mockup-wrapper">
-        <img src="/assets/ai-mockup-final.png" alt="AI Construction Mockup">
-        <div class="blueprint-grid"></div>
-    </div>
+<h2>Smart Construction, Smarter Decisions</h2>
+<div class="mockup-wrapper">
+<img src="/assets/ai-mockup-final.png" alt="AI Construction Mockup">
+<div class="blueprint-grid"></div>
+</div>
 </section>
 
----
+<!-- Upload Section -->
+
+<section class="upload-section container fade-in" id="upload-section">
+<h2>Try BuildNexus AI</h2>
+<p class="upload-subtext">Upload a sketch, floor plan, or material list.</p>
+
+<div class="upload-box" id="uploadBox">
+<p>Drag & Drop Files Here</p>
+<span>or click to upload</span>
+<input type="file" id="fileInput" accept="image/*" hidden>
+</div>
+
+<div class="upload-preview" id="uploadPreview">
+<img id="previewImage" alt="Preview">
+</div>
+
+<div class="loading" id="loading">
+<div class="spinner"></div>
+<p>Analyzing your file with BuildNexus AI...</p>
+</div>
+
+<div class="result" id="result">
+<h3>AI Analysis Complete ✔</h3>
+<p>Your estimation, planning & safety insights are ready.</p>
+</div>
+</section>
+
+<!-- Steps -->
 
 <section class="steps-section container fade-in" id="process">
-    <h2>Our Simple 3-Step Process</h2>
-    <div class="steps">
-        <div class="step"><h4>1. Upload Plan</h4><p>Share sketches, drawings, or material lists instantly.</p></div>
-        <div class="step"><h4>2. AI Analysis</h4><p>Our AI calculates cost, timelines, and safety risks in real-time.</p></div>
-        <div class="step"><h4>3. Execute & Track</h4><p>Receive actionable plans and updates throughout the project.</p></div>
-    </div>
+<h2>Our Simple 3-Step Process</h2>
+<div class="steps">
+<div class="step"><h4>1. Upload Plan</h4><p>Share sketches, drawings, or material lists instantly.</p></div>
+<div class="step"><h4>2. AI Analysis</h4><p>Our AI calculates cost, timelines, and safety risks in real-time.</p></div>
+<div class="step"><h4>3. Execute & Track</h4><p>Receive actionable plans and updates throughout the project.</p></div>
+</div>
 </section>
 
----
+<!-- CTA -->
 
 <section class="cta fade-in" id="cta-section">
-    <button onclick="window.location.href='#contact'">Join BuildNexus Today</button>
+<button onclick="window.location.href='#contact'">Join BuildNexus Today</button>
 </section>
 
----
+<!-- Contact -->
 
 <section class="contact container fade-in" id="contact">
-    <h3>Stay Updated with BuildNexus</h3>
-    <p>Subscribe to get updates, project insights, and beta access.</p>
-    <form id="newsletter-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-    </form>
-    <p id="form-message">Thank you for subscribing!</p>
+<h3>Stay Updated with BuildNexus</h3>
+<p>Subscribe to get updates, project insights, and beta access.</p>
+<form id="newsletter-form">
+<input type="email" placeholder="Enter your email" required>
+<button type="submit">Subscribe</button>
+</form>
+<p id="form-message">Thank you for subscribing!</p>
 </section>
 
 <footer>&copy; 2025 BuildNexus. All rights reserved.</footer>
 
 <script>
 document.addEventListener("DOMContentLoaded",function(){
-    // --- 1. Fade-in on Scroll ---
-    const faders = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-    faders.forEach(fader => observer.observe(fader));
 
-    // --- 2. Blueprint Grid Animation Setup ---
-    const grid = document.querySelector('.blueprint-grid');
-    if (grid) {
-        for (let i = 0; i < 3; i++) {
-            const line = document.createElement('span');
-            grid.appendChild(line);
-        }
-        for (let i = 0; i < 15; i++) {
-            const node = document.createElement('div');
-            node.classList.add('node');
-            node.style.top = Math.random() * 90 + '%';
-            node.style.left = Math.random() * 90 + '%';
-            grid.appendChild(node);
-        }
-    }
+// Fade-in on Scroll
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+},{threshold:0.2});
+faders.forEach(fader => observer.observe(fader));
 
-    // --- 3. Newsletter Submission (Functional Prototype) ---
-    const form = document.getElementById('newsletter-form');
-    const message = document.getElementById('form-message');
-    form.addEventListener('submit', function(e) {
-        e.preventDefault(); 
-        
-        message.style.display = 'block';
-        message.textContent = 'Success! Email received for beta access.';
-        
-        setTimeout(() => {
-            message.style.display = 'none';
-            message.textContent = '';
-            form.reset();
-        }, 3000);
-    });
+// Blueprint Grid
+const grid = document.querySelector('.blueprint-grid');
+if(grid){
+for(let i=0;i<3;i++){const line=document.createElement('span');grid.appendChild(line);}
+for(let i=0;i<15;i++){
+const node=document.createElement('div');
+node.classList.add('node');
+node.style.top=Math.random()*90+'%';
+node.style.left=Math.random()*90+'%';
+grid.appendChild(node);
+}
+}
 
-    // --- 4. Responsive Navigation Toggle ---
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const links = navLinks.querySelectorAll('a');
+// Newsletter Form
+const form = document.getElementById('newsletter-form');
+const message = document.getElementById('form-message');
+form.addEventListener('submit', function(e){
+e.preventDefault();
+message.style.display='block';
+message.textContent='Success! Email received for beta access.';
+setTimeout(()=>{message.style.display='none';message.textContent='';form.reset();},3000);
+});
 
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+// Responsive Navigation Toggle
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+const links=navLinks.querySelectorAll('a');
+menuToggle.addEventListener('click',()=>{navLinks.classList.toggle('active');});
+links.forEach(link=>{link.addEventListener('click',()=>{if(window.innerWidth<=900){navLinks.classList.remove('active');}});});
 
-    // Close menu when a link is clicked (on mobile)
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 900) {
-                navLinks.classList.remove('active');
-            }
-        });
-    });
+// Upload Section
+const uploadBox=document.getElementById('uploadBox');
+const fileInput=document.getElementById('fileInput');
+const uploadPreview=document.getElementById('uploadPreview');
+const previewImage=document.getElementById('previewImage');
+const loading=document.getElementById('loading');
+const result=document.getElementById('result');
+
+uploadBox.addEventListener('click',()=>fileInput.click());
+uploadBox.addEventListener('dragover',(e)=>{e.preventDefault();uploadBox.style.background='#E8F4FF';});
+uploadBox.addEventListener('dragleave',()=>{uploadBox.style.background='#F8FBFF';});
+uploadBox.addEventListener('drop',(e)=>{e.preventDefault();handleFile(e.dataTransfer.files[0]);});
+fileInput.addEventListener('change',(e)=>{handleFile(e.target.files[0]);});
+
+function handleFile(file){
+if(!file) return;
+previewImage.src=URL.createObjectURL(file);
+uploadPreview.style.display='block';
+loading.style.display='block';
+result.style.display='none';
+setTimeout(()=>{
+loading.style.display='none';
+result.style.display='block';
+},3000);
+}
+
 });
 </script>
 
