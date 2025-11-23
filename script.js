@@ -1,21 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('signupForm');
-    const message = document.getElementById('message-output');
+    const messageOutput = document.getElementById('message-output');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Stop page reload
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent reload
 
-        const email = document.getElementById('email').value;
+        const emailInput = document.getElementById('email').value;
 
-        if(email) {
-            // Success State
-            message.style.color = '#28a745'; // Green
-            message.textContent = Success! You've joined Build Nexus.;
-            form.reset(); // Clear the input
+        if(emailInput) {
+            // Success simulation
+            messageOutput.style.color = "green";
+            messageOutput.textContent = "Thank you! We will contact you at " + emailInput;
+            document.getElementById('email').value = ''; // Clear input
         } else {
-            // Error State
-            message.style.color = '#dc3545'; // Red
-            message.textContent = 'Please enter a valid email.';
+            messageOutput.style.color = "red";
+            messageOutput.textContent = "Please enter a valid email.";
+        }
+    });
+});document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('signupForm');
+    const messageOutput = document.getElementById('message-output');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent reload
+
+        const emailInput = document.getElementById('email').value;
+
+        if(emailInput) {
+            // Success simulation
+            messageOutput.style.color = "green";
+            messageOutput.textContent = "Thank you! We will contact you at " + emailInput;
+            document.getElementById('email').value = ''; // Clear input
+        } else {
+            messageOutput.style.color = "red";
+            messageOutput.textContent = "Please enter a valid email.";
         }
     });
 });
